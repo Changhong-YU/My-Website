@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Changhong YU</title>
+    <meta name="description" content="Welcome to Changhong Yu's personal homepage, featuring projects, education background, and more."> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Changhong Yu</h1>
+        <p>Welcome to my homepage!</p>
+    </header>
+
     <aside>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="documents/CV-YuChanghong-231105.pdf" target="_blank">CV</a></li>
                 <li><a href="projects/project_main.html">Projects</a>
-                    <ul class="sub-projects">
+                    <ul class="nav-projects">
                         <li><a href="projects/project_3_Structure_of_Narratives.html">Structure of Narratives</a></li>
                         <li><a href="projects/project_2_ABED-123.html">ABED-123</a></li>
                         <li><a href="projects/project_1_Fractal_Knowledge.html">Fractal Knowledge</a></li>
@@ -25,36 +31,51 @@
             </ul>
         </nav>
     </aside>
-    <header>
-        <h1>Changhong Yu</h1>
-        <p>Welcome to my homepage!</p>
-    </header>
+    
     <main>
-        <section class="profile">
-            <div class="profile-photo">
-                <img src="images/profile.jpg" alt="Profile Picture">
-                <p>于长洪（Yu Changhong）</p> 
+        <div class="profile-photo">
+            <img src="images/profile.jpg" alt="Profile Photo">
+            <p>于长洪（Yu Changhong）</p> 
+        </div>
+
+        <div class="info">
+            <div class="introduction">
+                <p>I am currently taking a gap year to explore my research interests and advance my ideas. My work is dedicated to understanding the <strong>structure</strong> of society, focusing on two main aspects: <strong>narrative structure dynamics</strong> and <strong>the interplay of social dimensions</strong>. My exploration is embodied in two key projects: "Structure of Narratives" and "Agent Based Evolutionary Dynamics: 1 population 2 payoffs 3 strategies (ABED-123)."</p>
+
+                <p>"Structure of Narratives" employs computational text analysis to map out the <strong>similarity of narrative structures</strong> and <strong> evolutionary trajectories</strong> of large-scale texts. "ABED-123" models the social landscape that emerges from agents operating under the influence of <strong>multidimensional payoffs</strong>. These efforts aim to understand the complex mechanisms that underpin our social world.</p>
+                
+                <!--<p>I am also on the lookout for further educational and professional opportunities aligned with my research interests. Should you have or know of opportunities that resonate with my work, please feel free to reach out.</p> -->
+            </div>    
+        
+        
+            <div class="supplementary-info">
+                <div class="education">
+                    <h2>Education</h2>
+                    <p>Zhejiang University, China</p>
+                    <ul>
+                        <li>2020 Sep - 2023 Jun : M.A. in Sociology</li>
+                        <li>2017 Sep - 2020 Jun : B.A. in Sociology</li>
+                        <li>2015 Sep - 2017 Jun : Major in Control Science and Engineering</li>
+                    </ul>
+                </div>
+
+                <div class="current-projects">
+                    <h2>Current Projects</h2>
+                        <ul>
+                            <li>Structure of Narratives</li>
+                            <li>ABED-123</li>
+                        </ul>
+                </div>
             </div>
-            <div class="education">
-                <h2>Education</h2>
-                <p>Zhejiang University, China</p>
-                <ul>
-                    <li>2020 Sep - 2023 Jun : M.A. in Sociology</li>
-                    <li>2017 Sep - 2020 Jun : B.A. in Sociology</li>
-                    <li>2015 Sep - 2017 Jun : Major in Control Science and Engineering</li>
-                </ul>
-            </div>
-            <div class="current-projects">
-                <h2>Current Projects</h2>
-                <ul>
-                    <li>ABED-123</li>
-                    <li>Structure of Narratives</li>
-                </ul>
-        </section>
+        
+        
+        </div>
     </main>
+
     <footer>
-        <p>Email: bcykpcx@gmail.com</p>
+        <address>Email: <a href="mailto:bcykpcx@gmail.com">bcykpcx@gmail.com</a></address>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

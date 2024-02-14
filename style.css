@@ -1,3 +1,4 @@
+/* 基本页面样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,47 +8,68 @@ body {
         "nav header"
         "nav main"
         "nav footer";
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 15vw 1fr;
+    /* grid-template-rows: 20vh 60vh 20vh; */
     height: 100vh;
     box-sizing: border-box;
     color: #333;
 }
 
+/* 侧边导航样式 */
 aside {
     grid-area: nav;
     background-color: #f1f1f1;
     padding: 1rem;
-
-    position: fixed;   /* 固定位置 */
-    left: 0;           /* 边栏靠左 */
-    top: 0;            /* 从顶部开始 */
-    width: 200px;      /* 边栏宽度 */
-    height: 100%;      /* 边栏高度占满整个视窗的高度 */
-    /* overflow-y: auto;  如果内容超出高度，允许垂直滚动 */
-    /* 可以根据需要添加其他样式，如背景色、边框等 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 13vw;
+    height: 100%;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    line-height: 2;
+    font-size: 1.1rem;
 }
 
 
+/* 页眉样式 */
 header {
     grid-area: header;
-    text-align: center;
-    padding: 1rem;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
     background-color: #e7e7e7;
+    padding: 1rem;
+    text-align: center;
+    height: 15vh;
 }
 
+header p {
+    font-size: 1.2em;
+}
+
+/* 主内容区域样式 */
 main {
     grid-area: main;
-    text-align: center;
-    padding: 2rem;
+    display: flex;
+    gap: 20px;
+    padding: 20px; 
 }
 
+/* 页脚样式 */
 footer {
     grid-area: footer;
     background-color: #f1f1f1;
-    text-align: center;
+    display: flex;
     padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
+/* 导航链接样式 */
 nav ul {
     list-style: none;
     padding: 0;
@@ -60,42 +82,56 @@ nav ul li a {
     padding: 0.5rem 0;
 }
 
-
-.profile {
-    display: flex;
-    justify-content: space-between; /* 保持元素分散对齐 */
-    align-items: flex-start; /* 确保所有列从顶部开始对齐 */
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.profile-photo, .education, .current-projects {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+.nav-projects {
+    margin-left: 20px;
+    font-size: 0.9em;
 }
 
 .profile-photo {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* 确保子元素在容器中居中对齐 */
+    display: flex; 
+    flex-basis: 30%;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    font-size: 1.2rem;
 }
 
 .profile-photo img {
-    width: 300px; /* 或者你希望的任何尺寸 */
-    height: 300px; /* 使宽度和高度相同以创建一个完美的圆形 */
-    border-radius: 50%; /* 这个属性将图片变为圆形 */
-    border: 3px solid #ccc; /* 可选的边框 */
-    object-fit: cover; /* 确保图片在框内适当地填充 */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    object-fit: cover;
 }
 
-.education, .current-projects{
+.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     text-align: left;
 }
 
+.introduction{
+    flex-basis: 40%;
+    padding: 1rem 1rem;
+    text-align: left;
+    font-size: 1.16rem;
+}
 
-.education h2, .current-projects h2 {
-    margin: 0 0 1rem 0;
+.supplementary-info{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 1rem;
+}
+
+.education .current-projects{
+    flex: 1;
+    padding: 20px; /* 添加内边距以美化布局 */
+    vertical-align: top; /* 确保在顶部对齐 */
+    text-align: left; /* 文本左对齐 */
 }
 
 .education ul, .current-projects ul {
@@ -104,47 +140,8 @@ nav ul li a {
     margin: 0;
 }
 
-.sub-projects {
-    margin-left: 20px; /* 增加缩进 */
-    font-size: 0.9em;  /* 减小字体大小 */
-}
-
-.project {
-    display: flex;
-    align-items: center;
-    margin-bottom: 40px;  /* 增加项目之间的外边距 */
-    padding: 20px;        /* 在项目内部添加内边距 */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 可选：添加阴影效果增强视觉层次 */
-}
-
-.project img {
-    width: 50%;
-    height: auto;
-}
-
-.project-text {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* 子元素默认左对齐 */
-    padding-left: 20px;     /* 在图片和文字之间添加一些间隔 */
-}
-
-.project-text h3 {
-    width: 100%;
-    text-align: center;      /* 标题居中对齐 */
-}
-
-.project-text p {
-    text-align: left;        /* 段落左对齐 */
-}
-
-.project:nth-child(odd) {
-    flex-direction: row-reverse;
-}
-
-.project:nth-child(even) {
-    flex-direction: row;
+.education h2, .current-projects h2, .project-text h3 {
+    margin: 0 0 1rem 0;
 }
 
 .my-kitties {
@@ -154,4 +151,81 @@ nav ul li a {
 .my-kitties:hover {
     color: #cccccc; 
 }
+
+
+
+.projects-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; 
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.project-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.project-text p {
+    text-align: left;
+}
+
+.project img {
+    width: 50%;
+    height: auto;
+}
+
+
+.project:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.project:nth-child(even) {
+    flex-direction: row;
+}
+
+.kittens {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.kittens img {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
