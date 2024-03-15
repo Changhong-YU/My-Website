@@ -1,4 +1,5 @@
 /* 基本页面样式 */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +17,7 @@ body {
 }
 
 /* 侧边导航样式 */
-aside {
+#sidebar {
     grid-area: nav;
     background-color: #f1f1f1;
     padding: 1rem;
@@ -194,9 +195,19 @@ nav ul li a {
     flex-direction: row;
 }
 
-.kittens {
+#kittens {
     display: flex;
-    flex-basis: 50%;
+    flex-direction: row; /* 修改为水平排列 */
+    justify-content: center; /* 中心对齐子元素 */
+    align-items: center; /* 交叉轴上中心对齐子元素 */
+    gap: 20px; /* 子元素之间的间隙 */
+    padding: 20px; /* 容器内边距 */
+    width: 100%; /* 占满所有可用空间 */
+}
+
+.meow {
+    width: 50%;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -204,7 +215,7 @@ nav ul li a {
     padding: 2rem;
 }
 
-.kittens img {
+.meow img {
     width: 320px;
     height: 320px;
     border-radius: 50%;
@@ -213,14 +224,85 @@ nav ul li a {
 }
 
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 
+.content_box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-bottom: 40px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.content_box h2 {
+    text-align: center;
+}
+
+.content_box li {
+    list-style: none;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    font-size: 1.16rem;
+    line-height: 1.5;
+}
+.content_box p {
+    padding: 0.5rem 1rem;
+    font-size: 1.16rem;
+    line-height: 1.5;
+}
+.content_box h4 {
+    padding: 0.5rem 1rem;
+}
+
+.item-name {
+    text-align: center; /* 居中文本（适用于 <p> 标签） */
+    display: flex;
+    flex-direction: column; /* 使内容垂直排列 */
+    align-items: center; /* 在容器中居中对齐所有项 */
+    margin-bottom: 20px; /* 可选：添加一些底部外边距 */
+    width: fit-content; /* 使宽度适应内容 */
+    margin-left: auto; /* 左边距自动 */
+    margin-right: auto; /* 右边距自动 */
+}
+
+.item-name img {
+    width: 600px;
+    height: auto;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center; /* 使表格在容器中水平居中 */
+    margin: 0 auto; /* 这是另一种居中表格的方法 */
+    width: 100%; /* 根据需要调整或去除 */
+}
+
+table {
+    border-collapse: collapse; /* 去除表格边框之间的间隙 */
+    margin: 0 auto; /* 使表格居中 */
+}
+
+table, th, td {
+    border: 1px solid black; /* 添加边框以便更清楚地看到表格结构 */
+}
+
+th, td {
+    padding: 8px; /* 添加一些内边距使得文字不会紧贴边框 */
+    text-align: center; /* 使表格内的文字居中 */
+}
 
 
-
-
-
-
+.parallel {
+    display: flex;
+    justify-content: space-between; /* 如果需要在两个元素之间留出一些空间 */
+}
 
 
 
